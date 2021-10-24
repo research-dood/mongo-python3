@@ -1,4 +1,5 @@
 FROM image-registry.openshift-image-registry.svc:5000/openshift/mongodb
+ENV MONGODB_ADMIN_PASSWORD="bigsecret" MONGODB_USER="iai-user" MONGODB_PASSWORD="secret" MONGODB_DATABASE="admin"
 
 USER 0
 
