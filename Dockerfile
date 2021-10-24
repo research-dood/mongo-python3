@@ -7,8 +7,6 @@ RUN yum update -y\
     && yum install -y rh-python38 rh-python38-python-tools\
     && yum install -y wget\
     && yum install -y git\
-    && scl enable rh-python38 bash\
-    && useradd iai; echo s3cr3tP4ssW0rd! | passwd iai --stdin\
-    && usermod -aG wheel iai\
+    && scl enable rh-python38 bash
     
 
