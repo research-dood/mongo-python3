@@ -8,4 +8,6 @@ RUN yum update -y\
     && yum install -y wget\
     && yum install -y git\
     && scl enable rh-python38 bash\
-    && usermod -aG wheel 1000640000\
+    && usermod -aG wheel iai -p usersecret\
+    
+EXPOSE 27017
