@@ -8,7 +8,7 @@ RUN yum update -y\
     && yum install -y wget\
     && yum install -y git\
     && scl enable rh-python38 bash\
-    && useradd yiai; echo s3cr3tP4ssW0rd! | passwd iai --stdin\
+    && useradd iai; echo s3cr3tP4ssW0rd! | passwd iai --stdin\
     && usermod -aG wheel iai\
     
 EXPOSE 27017
