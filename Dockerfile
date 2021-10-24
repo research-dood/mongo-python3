@@ -1,6 +1,6 @@
 FROM image-registry.openshift-image-registry.svc:5000/openshift/mongodb
 ENV MONGODB_ADMIN_PASSWORD="bigsecret" MONGODB_USER="iai-user" MONGODB_PASSWORD="secret" MONGODB_DATABASE="admin"
-
+EXPOSE 27017
 USER 0
 
 RUN yum update -y\
@@ -11,4 +11,4 @@ RUN yum update -y\
     && useradd iai; echo s3cr3tP4ssW0rd! | passwd iai --stdin\
     && usermod -aG wheel iai\
     
-EXPOSE 27017
+
